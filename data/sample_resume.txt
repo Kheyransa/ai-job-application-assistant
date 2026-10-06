@@ -1,0 +1,5 @@
+Alex Morgan — fictional software developer
+Built Python and FastAPI services for a university library project. Wrote pytest
+unit tests and used Git for team collaboration. Designed REST endpoints and used
+PostgreSQL for book inventory. Completed a capstone integrating an external LLM
+API for document summarization with input validation and error handling.

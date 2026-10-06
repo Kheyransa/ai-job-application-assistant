@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare your resume with a job description and prepare your next application.">
+  <title>AI Job Application Assistant</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar"><div class="shell topbar-content">
+    <a class="brand" href="/" aria-label="Job Application Assistant home"><span class="brand-icon" aria-hidden="true">A</span> Application assistant</a>
+    <a class="docs-link" href="/docs">API documentation <span aria-hidden="true">↗</span></a>
+  </div></header>
+  <main id="main" class="shell">
+    <section class="intro" aria-labelledby="title">
+      <span class="eyebrow"><span class="blue-dot" aria-hidden="true"></span> A little clarity for your next career move</span>
+      <h1 id="title">AI Job Application Assistant<span class="title-dot">.</span></h1>
+      <p>See how your experience fits the role. Get a thoughtful comparison, practical resume suggestions, and questions to help you prepare.</p>
+      <div class="steps" aria-label="How it works"><span><b>01</b> Add your documents</span><span><b>02</b> Compare the fit</span><span><b>03</b> Prepare with confidence</span></div>
+    </section>
+    <section class="workspace" aria-labelledby="workspace-title">
+      <div class="workspace-heading"><div><span class="eyebrow">START WITH THE DETAILS</span><h2 id="workspace-title">Your experience. Their expectations.</h2></div><button id="load-sample" class="button button-secondary" type="button">Load sample</button></div>
+      <form id="analysis-form" novalidate>
+        <div class="input-grid">
+          <div class="field"><div class="label-row"><label for="resume">Resume</label><span class="field-number" aria-hidden="true">01</span></div><p id="resume-help" class="field-help">Paste your experience, skills, and qualifications.</p>
+            <textarea id="resume" name="resume" rows="12" aria-describedby="resume-help resume-count resume-error" placeholder="Your story starts here…&#10;&#10;Experience&#10;Skills&#10;Education"></textarea>
+            <div class="field-footer"><span>50–20,000 characters · at least 20 letters</span><span id="resume-count">0 / 20,000</span></div><p id="resume-error" class="field-error" hidden></p>
+          </div>
+          <div class="field"><div class="label-row"><label for="job_description">Job description</label><span class="field-number" aria-hidden="true">02</span></div><p id="job_description-help" class="field-help">Paste the role, responsibilities, and requirements.</p>
+            <textarea id="job_description" name="job_description" rows="12" aria-describedby="job_description-help job_description-count job_description-error" placeholder="The opportunity you have in mind…&#10;&#10;About the role&#10;Responsibilities&#10;Required skills"></textarea>
+            <div class="field-footer"><span>50–20,000 characters · at least 20 letters</span><span id="job_description-count">0 / 20,000</span></div><p id="job_description-error" class="field-error" hidden></p>
+          </div>
+        </div>
+        <div class="form-actions"><p class="privacy-note"><span aria-hidden="true">◇</span> Documents are sent to the configured AI provider. Use only information you’re comfortable sharing.</p><div class="action-buttons"><button id="clear" type="button" class="button button-quiet">Clear</button><button id="analyze" type="submit" class="button button-primary"><span id="spinner" class="spinner" aria-hidden="true" hidden></span><span id="analyze-label">Analyze match</span><span id="analyze-arrow" aria-hidden="true">→</span></button></div></div>
+      </form>
+    </section>
+    <p id="status" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <div id="error" class="error-banner" role="alert" aria-atomic="true" hidden></div>
+    <section id="results" aria-labelledby="results-title" hidden>
+      <div class="result-heading"><div><span class="eyebrow">YOUR APPLICATION, IN PERSPECTIVE</span><h2 id="results-title" tabindex="-1">Your match analysis</h2><p>Based on the resume and job description you submitted.</p></div><div class="score-card"><div><strong id="score">0</strong><span> / 100</span></div><span class="score-label">AI estimate of alignment</span></div></div>
+      <div class="results-grid">
+        <article class="result-card"><span class="card-kicker">THE OVERLAP</span><h3>Matching skills</h3><div id="matching_skills" class="tags"></div></article>
+        <article class="result-card"><span class="card-kicker">ROOM TO GROW</span><h3>Missing skills</h3><p class="card-note">Not evidenced in your resume; not necessarily absent.</p><div id="missing_skills" class="tags tags-muted"></div></article>
+        <article class="result-card wide"><span class="card-kicker">WHAT CONNECTS</span><h3>Relevant experience</h3><ul id="relevant_experience"></ul></article>
+        <article class="result-card"><h3>Strengths</h3><ul id="strengths"></ul></article>
+        <article class="result-card"><h3>Gaps to consider</h3><ul id="gaps"></ul></article>
+        <article class="result-card"><span class="card-kicker">REFINE YOUR STORY</span><h3>CV improvements</h3><ul id="cv_improvements"></ul></article>
+        <article class="result-card"><span class="card-kicker">PREPARE FOR THE CONVERSATION</span><h3>Interview questions</h3><ol id="interview_questions"></ol></article>
+      </div><p class="review-note">AI can miss context. Review every suggestion against your actual resume. The score is an estimate, not a hiring prediction.</p>
+    </section>
+    <footer><span>Thoughtful preparation. A stronger application.</span><a href="/docs">Swagger documentation</a></footer>
+    <noscript><p class="error-banner">Enable JavaScript to use this interface, or submit requests through <a href="/docs">Swagger documentation</a>.</p></noscript>
+  </main>
+</body>
+</html>

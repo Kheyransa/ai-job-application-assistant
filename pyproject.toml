@@ -1,0 +1,16 @@
+[project]
+name = "ai-job-application-assistant"
+version = "1.0.0"
+description = "Structured resume and job description analysis through a configurable LLM"
+requires-python = ">=3.11"
+dynamic = ["dependencies"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["app*"]

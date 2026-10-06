@@ -1,0 +1,5 @@
+Fictional role: Junior Python / AI Application Developer
+Build Python APIs using FastAPI, integrate external LLM services, and write pytest
+tests. Work with Git, REST interfaces, and PostgreSQL. Explain design decisions
+and collaborate with a small engineering team. Docker experience and familiarity
+with cloud deployment are desirable. Demonstrate responsible handling of user data.
